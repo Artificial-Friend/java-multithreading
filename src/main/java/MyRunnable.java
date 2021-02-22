@@ -1,5 +1,3 @@
-import org.apache.log4j.Logger;
-
 public class MyRunnable implements Runnable {
     private final Counter counter;
 
