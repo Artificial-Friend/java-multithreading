@@ -4,4 +4,8 @@ public class Counter {
     public int increment() {
         return ++num;
     }
+
+    public int getNum() {
+        return num;
+    }
 }

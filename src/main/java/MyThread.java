@@ -10,7 +10,7 @@ public class MyThread extends Thread {
 
     @Override
     public void run() {
-        for (int i = 0; i < 100; i++) {
+        while (counter.getNum() < 100){
             logger.info(Thread.currentThread().getName() + " : " + counter.increment());
         }
     }
