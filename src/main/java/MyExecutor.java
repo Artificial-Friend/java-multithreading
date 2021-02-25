@@ -17,7 +17,8 @@ public class MyExecutor {
 
     public Integer calculate() {
         ExecutorService executorService = Executors.newFixedThreadPool(LOCAL_THREADS);
-        List<List<Integer>> partition = ListUtils.partition(numbers, numbers.size() / LOCAL_THREADS);
+        List<List<Integer>> partition
+                = ListUtils.partition(numbers, numbers.size() / LOCAL_THREADS);
         List<Callable<Integer>> tasks = new ArrayList<>();
         for (int i = 0; i < partition.size(); i++) {
             tasks.add(new CallableSumCalculator(partition.get(i)));
